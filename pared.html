@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Fondo general con tono orgánico */
+        body {
+            background-color: #1a1c1a; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px;
+            margin: 0;
+        }
+
+        /* Contenedor de la imagen para crear el efecto de "aparición" */
+        .contenedor-imagen {
+            position: relative;
+            max-width: 500px;
+            /* El filtro de sombra suaviza los bordes de la imagen hacia el fondo */
+            filter: drop-shadow(0 0 15px rgba(0,0,0,0.8));
+        }
+
+        .imagen-relato {
+            width: 100%;
+            height: auto;
+            display: block;
+            /* Hacemos la imagen un poco más oscura y contrastada */
+            filter: sepia(0.3) grayscale(0.2) contrast(1.2);
+            /* Bordes difuminados (mask) para que no sea un rectángulo perfecto */
+            mask-image: radial-gradient(circle, black 50%, rgba(0,0,0,0) 95%);
+            -webkit-mask-image: radial-gradient(circle, black 50%, rgba(0,0,0,0) 95%);
+            border-radius: 10px;
+        }
+
+        .texto-pie {
+            color: #7a827a;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor-imagen">
+        <img src="escamas.jpg" alt="Detalle orgánico" class="imagen-relato">
+    </div>
+
+    <p class="texto-pie">"El barro del lago lo impregna todo..."</p>
+
+</body>
+</html>
